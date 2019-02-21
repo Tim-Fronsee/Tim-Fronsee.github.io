@@ -14,7 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "yarn run build",
+    "docs": "rm -rf docs && mkdir docs && cp public/index.html ./docs/",
+    "predeploy": "yarn run build && yarn run docs",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
