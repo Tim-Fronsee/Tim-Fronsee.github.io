@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://Tim-Fronsee.github.io",
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "gh-pages": "^1.1.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
