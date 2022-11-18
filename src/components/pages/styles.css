@@ -1,0 +1,13 @@
+.Page p {
+  height: 100vh%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.Page-appear {
+  opacity: 0.01;
+}
+
+.Page-enter {
+  transition: opacity 500ms ease-in;
+}
