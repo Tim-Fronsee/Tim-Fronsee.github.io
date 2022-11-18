@@ -1,4 +1,19 @@
-.LanguageToggle
-{
-  background-color: black
+.LanguageToggle {
+}
+
+button {
+  border: 0;
+  color: #FFFFFF;
+  background-color: #00000000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+ul.inactive {
+  color: #999999
+}
+
+ul.active {
+  color: #FFFFFF
 }

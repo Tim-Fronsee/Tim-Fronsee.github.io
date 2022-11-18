@@ -26,12 +26,14 @@ i18next
         translation: {
           engineering: 'Engineering',
           art: 'Art',
+          career: 'Career History'
         },
       },
       ja: {
         translation: {
           engineering: '工学',
           art: 'アート',
+          career: '職務経歴'
         },
       },
     },

@@ -9,7 +9,11 @@ const LanguageToggle = () => {
 
   return (
     <div className="languageSwitcher">
-      <button onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')} className="lang">EN/JP</button>
+      <button onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')} className="lang">
+        <ul className={i18n.language === 'en' ? "active" : "inactive"}>EN</ul>
+        <ul className="inactive">/</ul>
+        <ul className={i18n.language === 'ja' ? "active" : "inactive"}>JP</ul>
+      </button>
     </div>
   );
 };

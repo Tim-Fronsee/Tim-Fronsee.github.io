@@ -55,7 +55,7 @@ const Tabs = () => {
       <div className="outlet">
         {activePage === "Engineering" ?
           <Page
-            title="Career History"
+            title={t('career')}
             content=
               <div>
                 <VerticalTimeline>
@@ -64,17 +64,49 @@ const Tabs = () => {
                     date="December 2015"
                     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                   >
-                  <h3 className="vertical-timeline-element-title">Bachelor of Science in Computer Engineering, Computer Science</h3>
-                  <h4 className="vertical-timeline-element-subtitle">Universtiy of Wisconsin, Madison</h4>
+                    <h3 className="vertical-timeline-element-title">Bachelor of Science in Computer Engineering, Computer Science</h3>
+                    <h4 className="vertical-timeline-element-subtitle">Universtiy of Wisconsin, Madison</h4>
                   </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                      className="vertical-timeline-element--work"
-                      date="Janurary 2016"
-                      iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                    >
-                    <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="Janurary 2016"
+                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                  >
+                    <h3 className="vertical-timeline-element-title">Software Engineer II</h3>
                     <h4 className="vertical-timeline-element-subtitle">Johnson Health Tech, N.A.</h4>
-                    </VerticalTimelineElement>
+                  </VerticalTimelineElement>
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="May 2018"
+                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                  >
+                    <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+                    <h4 className="vertical-timeline-element-subtitle">Scoville Co., Ltd.</h4>
+                  </VerticalTimelineElement>
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="December 2018"
+                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                  >
+                    <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+                    <h4 className="vertical-timeline-element-subtitle">Injenico Japan</h4>
+                  </VerticalTimelineElement>
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="July 2019"
+                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                  >
+                    <h3 className="vertical-timeline-element-title">Robotics Software Engineer</h3>
+                    <h4 className="vertical-timeline-element-subtitle">SEAOS Inc.</h4>
+                  </VerticalTimelineElement>
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="Janurary 2020"
+                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                  >
+                    <h3 className="vertical-timeline-element-title">3D Simulation Engineer</h3>
+                    <h4 className="vertical-timeline-element-subtitle">SEAOS Inc.</h4>
+                  </VerticalTimelineElement>
                 </VerticalTimeline>
               </div>
           />
