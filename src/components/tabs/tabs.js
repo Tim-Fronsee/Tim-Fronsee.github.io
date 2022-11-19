@@ -10,33 +10,31 @@ import LanguageToggle from '../language/language.js'
 
 import { useTranslation } from 'react-i18next';
 
-// Engineering
+import Engineering from '../pages/engineering'
 
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import Art from '../pages/art'
 
-// Art
-
-import cat from '../../assets/anims/cat.mkv';
-import imp from '../../assets/anims/imp.mkv';
-
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import ModelViewer from '../modelviewer';
-
-import model from '../../assets/bamboo.glb';
+import { useTransition } from 'react-transition-state';
 
 const Tabs = () => {
   const { t } = useTranslation();
+
+  const [state, toggle] = useTransition({ timeout: 750, preEnter: true });
 
   //  Functions to handle Tab Switching
   const handlePageChange = (pageName) => {
     // update the state to tab1
     setActivePage(pageName);
+    toggle();
+  };
+
+  const handleLayoutChange = (e) => {
+    console.log(e.target.value);
+    setLayout(layout);
   };
 
   const [activePage, setActivePage] = useState("Engineering");
+  const [layout, setLayout] = useState('2-columns');
   return (
     <div className="Tabs">
       <ul className="header">
@@ -54,74 +52,9 @@ const Tabs = () => {
       </ul>
       <div className="outlet">
         {activePage === "Engineering" ?
-          <Page
-            title={t('career')}
-            content=
-              <div>
-                <VerticalTimeline>
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--education"
-                    date="December 2015"
-                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                  >
-                    <h3 className="vertical-timeline-element-title">Bachelor of Science in Computer Engineering, Computer Science</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Universtiy of Wisconsin, Madison</h4>
-                  </VerticalTimelineElement>
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    date="Janurary 2016"
-                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                  >
-                    <h3 className="vertical-timeline-element-title">Software Engineer II</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Johnson Health Tech, N.A.</h4>
-                  </VerticalTimelineElement>
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    date="May 2018"
-                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                  >
-                    <h3 className="vertical-timeline-element-title">Software Engineer</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Scoville Co., Ltd.</h4>
-                  </VerticalTimelineElement>
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    date="December 2018"
-                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                  >
-                    <h3 className="vertical-timeline-element-title">Software Engineer</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Injenico Japan</h4>
-                  </VerticalTimelineElement>
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    date="July 2019"
-                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                  >
-                    <h3 className="vertical-timeline-element-title">Robotics Software Engineer</h3>
-                    <h4 className="vertical-timeline-element-subtitle">SEAOS Inc.</h4>
-                  </VerticalTimelineElement>
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    date="Janurary 2020"
-                    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                  >
-                    <h3 className="vertical-timeline-element-title">3D Simulation Engineer</h3>
-                    <h4 className="vertical-timeline-element-subtitle">SEAOS Inc.</h4>
-                  </VerticalTimelineElement>
-                </VerticalTimeline>
-              </div>
-          />
+          <Page title={t('open_source')} content=<Engineering />/>
           :
-          <Page
-            title="Works"
-            content=
-              <div>
-                <p>Cat</p>
-                <video src={cat} autoPlay loop muted />
-                <p>Imp</p>
-                <video src={imp} autoPlay loop muted />
-                <ModelViewer scale="1" modelPath={model} />
-              </div>
-           />
+          <Page title={t("projects_3d")} content=<Art/> />
         }
       </div>
     </div>

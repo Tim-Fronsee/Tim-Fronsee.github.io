@@ -7,6 +7,8 @@ import { initReactI18next, useTranslation } from 'react-i18next';
 
 import Tabs from './components/tabs/tabs';
 
+import Footer from './components/footer/footer'
+
 const languageDetector = {
   type: 'languageDetector',
   async: true,
@@ -24,16 +26,21 @@ i18next
     resources: {
       en: {
         translation: {
+          contributions: 'Contributions',
+          projects_3d: '3D Projects',
           engineering: 'Engineering',
           art: 'Art',
-          career: 'Career History'
+          open_source: 'Open Source Projects',
+          rigging: '3D Character Rigging',
+          course: 'Course Work',
+          made_with: 'Made with'
         },
       },
       ja: {
         translation: {
           engineering: '工学',
           art: 'アート',
-          career: '職務経歴'
+          open_source: '職務経歴'
         },
       },
     },
@@ -43,6 +50,7 @@ function App() {
   return (
     <div className="App">
       <Tabs/>
+      <Footer/>
     </div>
   );
 }

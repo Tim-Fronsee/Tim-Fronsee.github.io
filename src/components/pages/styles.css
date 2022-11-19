@@ -1,13 +1,66 @@
-.Page p {
+.Page {
   height: 100vh%;
-  font-size: 2rem;
+  width: 100vh%;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.Page.preEnter,
+.Page.exiting {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.Page.exited {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.ModelViewer {
+  width: auto;
+  height: auto;
+}
+
+.rigging {
+  display: flex;
+  width: 100vh%;
+}
+
+video {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+.course {
+  display: flex;
+  width: 100vh%;
+}
+
+.blender {
+  max-width: 25%;
+}
+
+.VerticalTimeline {
+  padding: 0 0 5rem 0;
+}
+
+.vertical-timeline-element {
+  min-height: 50%;
+}
+
+.icon {
+  width: 75%;
   text-align: center;
 }
 
-.Page-appear {
-  opacity: 0.01;
-}
-
-.Page-enter {
-  transition: opacity 500ms ease-in;
+.Button {
+  background: #000000;
+  background-color: #000000;
+  color: #000000;
+  min-height: 5rem;
+  font-size: 1rem;
+  text-decoration: none;
 }

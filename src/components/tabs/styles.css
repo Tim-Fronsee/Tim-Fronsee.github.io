@@ -1,15 +1,16 @@
 .Tabs {
    width: 100vh%;
-   height: 100vh;
+   min-height: 100vh;
    background: #575757;
    color: #E8F0F2;
-   @media (max-width: 769px) {
-    padding: 2rem 0;
-   }
 }
 
 h3, h4 {
   color: #858585
+}
+
+.header {
+  background: #858585
 }
 
 ul.header {
@@ -51,16 +52,13 @@ ul.nav li:hover {
 }
 
 ul.nav li.active {
-  background: #858585;
+  background: #C4C4C4;
 }
 
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.date {
+  color: #000000
 }
 
-.ModelViewer {
-  width: auto;
-  height: auto;
+.date-wide {
+  color: #AAAAAA
 }
