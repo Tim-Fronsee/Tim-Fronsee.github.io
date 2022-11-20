@@ -28,16 +28,10 @@ const Tabs = () => {
     toggle();
   };
 
-  const handleLayoutChange = (e) => {
-    console.log(e.target.value);
-    setLayout(layout);
-  };
-
   const [activePage, setActivePage] = useState("Engineering");
-  const [layout, setLayout] = useState('2-columns');
   return (
     <div className="Tabs">
-      <ul className="header">
+      <div className="header">
         <LanguageToggle />
         <ul className="nav">
           <li
@@ -49,10 +43,10 @@ const Tabs = () => {
             onClick={() => handlePageChange("Art")}
           >{t('art')}</li>
         </ul>
-      </ul>
+      </div>
       <div className="outlet">
         {activePage === "Engineering" ?
-          <Page title={t('open_source')} content=<Engineering />/>
+          <Page title={t('career')} content=<Engineering />/>
           :
           <Page title={t("projects_3d")} content=<Art/> />
         }

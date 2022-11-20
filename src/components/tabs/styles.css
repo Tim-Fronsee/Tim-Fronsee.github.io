@@ -5,12 +5,20 @@
    color: #E8F0F2;
 }
 
-h3, h4 {
-  color: #858585
+.header {
+  background: #858585;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1;
 }
 
-.header {
-  background: #858585
+h3, h4 {
+  color: #ffffff;
+  padding: 0 0 .5rem 0;
+  font-size: 1rem;
 }
 
 ul.header {

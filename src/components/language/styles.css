@@ -1,5 +1,4 @@
 .LanguageToggle {
-  padding: 1rem;
 }
 
 button {
@@ -9,6 +8,12 @@ button {
   height: 100%;
   display: flex;
   align-items: center;
+  padding: 1rem;
+  transition: all 0.7s;
+}
+
+button:hover {
+  background: #C4C4C4
 }
 
 ul.inactive {
