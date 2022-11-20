@@ -8,8 +8,8 @@ import Slide from '@mui/material/slide'
 
 import styles from "./styles.css"
 
-import cat from '../../assets/anims/cat.mkv';
-import imp from '../../assets/anims/imp.mkv';
+import cat from '../../assets/anims/cat.mp4';
+import imp from '../../assets/anims/imp.mp4';
 
 const Art = () => {
   const { t } = useTranslation();
