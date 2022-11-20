@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 
 import i18next from 'i18next';
 
-import { initReactI18next, useTranslation } from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 
 import Tabs from './components/tabs/tabs';
 

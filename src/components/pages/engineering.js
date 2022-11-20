@@ -2,7 +2,7 @@ import React from "react";
 
 import {BrowserRouter as Router} from 'react-router-dom';
 
-import { VerticalTimeline, VerticalTimelineElement, WorkIcon }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 import { useTranslation } from 'react-i18next';

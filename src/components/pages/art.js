@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { useTranslation } from 'react-i18next';
 
@@ -21,7 +21,10 @@ const Art = () => {
           <Router>
             <div>
               <a href="https://www.blender.org/" target="_blank" rel="noreferrer">
-                <img className="blender" src={require("../../assets/logos/blender_logo_no_socket_white.png")} />
+                <img
+                  className="blender"
+                  src={require("../../assets/logos/blender_logo_no_socket_white.png")}
+                  alt=""/>
               </a>
             </div>
           </Router>
@@ -45,13 +48,13 @@ const Art = () => {
         <h3>{t("course_credit")}</h3>
         <div className="course">
           <div>
-            <img src={require("../../assets/renders/cgc_human_backlighting_bw.png")} />
+            <img src={require("../../assets/renders/cgc_human_backlighting_bw.png")} alt="" />
           </div>
           <div>
-            <img src={require("../../assets/renders/cgc_human_wood_grain.png")} />
+            <img src={require("../../assets/renders/cgc_human_wood_grain.png")} alt="" />
           </div>
         </div>
-        <img src={require("../../assets/renders/cgc_human_wide.png")} />
+        <img src={require("../../assets/renders/cgc_human_wide.png")} alt="" />
       </div>
     </Slide>
   );
