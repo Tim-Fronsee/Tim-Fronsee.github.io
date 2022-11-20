@@ -65,7 +65,7 @@ i18next
           career: '職務経歴',
           rigging: '3Dキャラクターリギング',
           renders: 'レンダリング',
-          course: '課程の事業',
+          course: 'コースワーク',
           course_credit: 'CG CookieのHUMAN課程',
           made_with: 'アートを作ったソフトは',
           date_godot: '2022年9月',

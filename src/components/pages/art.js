@@ -33,11 +33,11 @@ const Art = () => {
         <div className="rigging">
           <div>
             <h3>{t("cat")}</h3>
-            <video src={cat} autoPlay loop muted />
+            <video src={cat} autoPlay loop muted playsinline />
           </div>
           <div>
             <h3>{t("imp")}</h3>
-            <video src={imp} autoPlay loop muted />
+            <video src={imp} autoPlay loop muted playsinline />
           </div>
         </div>
         <h2>{t("renders")}</h2>
