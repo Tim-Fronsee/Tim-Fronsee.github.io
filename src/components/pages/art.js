@@ -17,7 +17,7 @@ const Art = () => {
     <Slide direction="up" in={true} mountOnEnter unmountOnExit>
       <div>
         <div className="row_blender">
-          <h2>{t("made_with")}</h2>
+          <h3>{t("made_with")}</h3>
           <Router>
             <div>
               <a href="https://www.blender.org/" target="_blank" rel="noreferrer">
@@ -41,20 +41,30 @@ const Art = () => {
           </div>
         </div>
         <h2>{t("renders")}</h2>
-        <div>
-          <img src={require("../../assets/renders/Treehouse-Concept12.png")} />
+        <div className="background_image">
+          <img
+            src={require("../../assets/renders/Treehouse-Concept12.png")}
+            alt="" />
         </div>
         <h2>{t("course")}</h2>
         <h3>{t("course_credit")}</h3>
-        <div className="course">
-          <div>
-            <img src={require("../../assets/renders/cgc_human_backlighting_bw.png")} alt="" />
+        <div className="background_image">
+          <div className="course">
+            <div>
+              <img
+                src={require("../../assets/renders/cgc_human_backlighting_bw.png")}
+                alt="" />
+            </div>
+            <div>
+              <img
+                src={require("../../assets/renders/cgc_human_wood_grain.png")}
+                alt="" />
+            </div>
           </div>
-          <div>
-            <img src={require("../../assets/renders/cgc_human_wood_grain.png")} alt="" />
-          </div>
+          <img
+            src={require("../../assets/renders/cgc_human_wide.png")}
+            alt="" />
         </div>
-        <img src={require("../../assets/renders/cgc_human_wide.png")} alt="" />
       </div>
     </Slide>
   );

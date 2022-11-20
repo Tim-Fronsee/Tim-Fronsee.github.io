@@ -6,38 +6,6 @@
   padding: 5rem 1rem 5rem 1rem;
 }
 
-.content {
-  transition: all 0.75s;
-}
-
-.content.preEnter,
-.content.exiting {
-  opacity: 0;
-  transform: scale(0.5);
-}
-
-.content-enter {
-  opacity: 0;
-}
-
-.content-enter-active {
-  opacity: 1;
-  transition: opacity 2000ms;
-}
-
-.content-exit {
-  opacity: 1;
-}
-
-.content-exit-active {
-  opacity: 0;
-  transition: opacity 2000ms;
-}
-
-.content.exited {
-  display: none;
-}
-
 h1 {
   padding: 0 0 .15rem 0;
 }
@@ -46,9 +14,14 @@ h2 {
   padding: 0 0 .5rem 0;
 }
 
+.background_image {
+  background: #c4c4c4;
+  padding: .30rem .15rem 0 .15rem;
+}
+
 img {
   width: 100%;
-  padding: 0 .15rem;
+  padding: 0 .25rem;
 }
 
 .ModelViewer {
