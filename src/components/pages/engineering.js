@@ -21,7 +21,7 @@ const Engineering = () => {
   const theme = useTheme();
   const { t } = useTranslation();
   const buttonStyle = {
-    backgroundColor: '#858585',
+    backgroundColor: '#5f7fa1',
     color: '#FFFFFF',
     display: 'flex',
     textTransform: 'none',
@@ -35,9 +35,16 @@ const Engineering = () => {
   const arrowStyle = {
     borderRight: '7px solid  #C4C4C4'
   }
+  const arrowStyleGit = {
+    borderRight: '7px solid  #97bde6'
+  }
   const contentStyle = {
     background: '#c4c4c4',
     boxShadow: '0 3px 0 #858585',
+  }
+  const contentStyleGit = {
+    background: '#97bde6',
+    boxShadow: '0 3px 0 #5f7fa1',
   }
   const iconStyle = {
     background: '#575757',
@@ -48,8 +55,8 @@ const Engineering = () => {
       <div className="VerticalTimeline">
         <VerticalTimeline>
           <VerticalTimelineElement
-            contentArrowStyle={arrowStyle}
-            contentStyle={contentStyle}
+            contentArrowStyle={arrowStyleGit}
+            contentStyle={contentStyleGit}
             date={t("date_godot")}
             icon={<BsGithub/>}
             iconStyle={iconStyle}
@@ -66,8 +73,8 @@ const Engineering = () => {
             </Button>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentArrowStyle={arrowStyle}
-            contentStyle={contentStyle}
+            contentArrowStyle={arrowStyleGit}
+            contentStyle={contentStyleGit}
             date={t("date_ros_integration")}
             icon={<BsGithub/>}
             iconStyle={iconStyle}
@@ -84,8 +91,8 @@ const Engineering = () => {
             </Button>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentArrowStyle={arrowStyle}
-            contentStyle={contentStyle}
+            contentArrowStyle={arrowStyleGit}
+            contentStyle={contentStyleGit}
             date={t("date_ros_integration")}
             icon={<BsGithub/>}
             iconStyle={iconStyle}
@@ -108,6 +115,10 @@ const Engineering = () => {
             icon={<MdWork/>}
             iconStyle={iconStyle}
           >
+            <div className="row">
+              <Chip label="Unreal Engine 4 & 5" style={chipStyle}/>
+              <Chip label="C++" style={chipStyle}/>
+            </div>
             <h3 className="vertical-timeline-element-title">{t("simulation_engineer")}</h3>
             <h4 className="vertical-timeline-element-subtitle">SEAOS Inc.</h4>
           </VerticalTimelineElement>
@@ -118,6 +129,9 @@ const Engineering = () => {
             icon={<MdWork/>}
             iconStyle={iconStyle}
           >
+            <div className="row">
+              <Chip label="Python" style={chipStyle}/>
+            </div>
             <h3 className="vertical-timeline-element-title">{t("robotics_engineer")}</h3>
             <h4 className="vertical-timeline-element-subtitle">SEAOS Inc.</h4>
           </VerticalTimelineElement>
@@ -128,12 +142,15 @@ const Engineering = () => {
             icon={<MdWork/>}
             iconStyle={iconStyle}
           >
+            <div className="row">
+              <Chip label="C++" style={chipStyle}/>
+            </div>
             <h3 className="vertical-timeline-element-title">{t("software_engineer")}</h3>
             <h4 className="vertical-timeline-element-subtitle">Injenico Japan</h4>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentArrowStyle={arrowStyle}
-            contentStyle={contentStyle}
+            contentArrowStyle={arrowStyleGit}
+            contentStyle={contentStyleGit}
             date={t("date_libgdx")}
             icon={<BsGithub/>}
             iconStyle={iconStyle}
@@ -156,6 +173,11 @@ const Engineering = () => {
             icon={<MdWork/>}
             iconStyle={iconStyle}
           >
+            <div className="row">
+              <Chip label="React" style={chipStyle}/>
+              <Chip label="Javascript" style={chipStyle}/>
+              <Chip label="Go" style={chipStyle}/>
+            </div>
             <h3 className="vertical-timeline-element-title">{t("software_engineer")}</h3>
             <h4 className="vertical-timeline-element-subtitle">Scoville Co., Ltd.</h4>
           </VerticalTimelineElement>
@@ -166,6 +188,11 @@ const Engineering = () => {
             icon={<MdWork/>}
             iconStyle={iconStyle}
           >
+            <div className="row">
+              <Chip label="Android" style={chipStyle}/>
+              <Chip label="Java" style={chipStyle}/>
+              <Chip label="Kotlin" style={chipStyle}/>
+            </div>
             <h3 className="vertical-timeline-element-title">{t("software_engineer")}II</h3>
             <h4 className="vertical-timeline-element-subtitle">Johnson Health Tech, N.A.</h4>
           </VerticalTimelineElement>

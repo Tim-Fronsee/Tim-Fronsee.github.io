@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Page from "../pages/page";
 
-import styles from "./styles.css"
+import styles from "./styles.css";
 
 // Language
 
@@ -13,6 +13,8 @@ import { useTranslation } from 'react-i18next';
 import Engineering from '../pages/engineering'
 
 import Art from '../pages/art'
+
+import Game from '../pages/game'
 
 import { useTransition } from 'react-transition-state';
 
@@ -39,6 +41,10 @@ const Tabs = () => {
             onClick={() => handlePageChange("Engineering")}
           >{t('engineering')}</li>
           <li
+            className={activePage === "Game" ? "active" : ""}
+            onClick={() => handlePageChange("Game")}
+          >{t('game_design')}</li>
+          <li
             className={activePage === "Art" ? "active" : ""}
             onClick={() => handlePageChange("Art")}
           >{t('art')}</li>
@@ -48,7 +54,10 @@ const Tabs = () => {
         {activePage === "Engineering" ?
           <Page title={t('career')} content=<Engineering />/>
           :
-          <Page title={t("projects_3d")} content=<Art/> />
+          activePage === "Game" ?
+            <Page title={t('game_design')} content=<Game />/>
+            :
+            <Page title={t("projects_3d")} content=<Art/> />
         }
       </div>
     </div>
